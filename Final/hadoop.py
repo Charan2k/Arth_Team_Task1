@@ -1,10 +1,10 @@
- 
+import os
 
 def hadoop():
     while(True):
                        
         print("Press 1: To Start your Name Node")
-        print("Press 2: To check hadoop services are running")
+        print(i"Press 2: To check hadoop services are running")
         print("Press 3: TO stop your name node")
         print("Press 4: To start your data node")
         print("Press 5: To check hdfs file system") 
