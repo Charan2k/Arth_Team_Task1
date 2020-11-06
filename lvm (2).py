@@ -1,4 +1,4 @@
-import os
+import os 
 disk1=input("Enter first disk name: ")
 volume=input("Enter the name of volume Group: ")
 name=input("Enter the name of LVM: ")
