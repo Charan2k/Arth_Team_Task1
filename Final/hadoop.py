@@ -1,5 +1,4 @@
 import os
-
 def hadoop():
     while(True):
                        
