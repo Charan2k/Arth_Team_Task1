@@ -63,17 +63,11 @@ def instances():
 	 Press  4 : To Describe All Instances 
 	 Press  5 : To Create a Volume
 	 Press  6 : To Attach volume with instance
-	 Press  7 : For Partitioning the attached volume
 	""")
 
-print("Enter Your Choice : ",end="")
+ch = int(input("Enter your choice: "))
 
-ch=input()
-	if int(ch) == 1:
-
-		os.system("aws configure")
-
-	elif int(ch) == 2:
+	if ch == 1:
 		print("""------------MENU----------
 		1. Amazon Linux
 		2. Redhat Linux.
@@ -90,25 +84,25 @@ ch=input()
 		groupname = input("Enter the security group name: ")
 		os.system("aws ec2 run-instances --instance-type t2.micro --key-name {} --security-groups {} --image-id {}".format(keyname,groupname,ami_id))
 
-	elif int(ch) == 3:
+	elif ch == 2:
 		print("Enter Instance Id : ",end = "")
 		uid = input()
 		os.system(" aws ec2 start-instances --instance-id {}".format(uid))
 
 
-	elif int(ch) == 4:
+	elif ch == 3:
 	    
 		print("Enter Instance Id : ",end = "")
 		uid = input()
 		os.system(" aws ec2 stop-instances --instance-id {}".format(uid))
 
 
-	elif int(ch) == 5:
+	elif ch == 4:
 
 		os.system("aws ec2 describe-instances")
 
 	    
-	elif int(ch) == 6:
+	elif ch == 5:
 
 	    
 		print("Enter Size : ",end = "")
@@ -120,7 +114,7 @@ ch=input()
 		os.system(" aws ec2 create-volume  --availability-zone {} --size {} --volume-type {}".format(zone,size,volume_type))
 
 
-	elif int(ch) == 7:
+	elif ch == 6:
 
 
 		os.system("tput setaf 3")
