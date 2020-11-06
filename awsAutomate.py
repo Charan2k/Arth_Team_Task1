@@ -1,7 +1,7 @@
 import os
 
 def keypair():
-	print("""--------MENU--------
+	print("""------------------MENU------------------
 	1. Create a key-pair
 	2. Describe a key-pair
 	3. Delete a key-pair
@@ -34,7 +34,7 @@ os.system("aws ec2 run-instances --image-id {}".format(id))
 """
 
 def securityGroup():
-	print("""--------MENU--------
+	print("""------------------MENU------------------
 	1. Create a security-group
 	2. Describe a security-group
 	3. Delete a security-group
@@ -55,7 +55,7 @@ def securityGroup():
 		os.system("aws ec2 delete-security-group --group-name {}".format(groupname))
 
 def instances():
-	print("-------Menu---------")
+	print("------------------MENU------------------")
 	print("""
 	 Press  1 : To Launch an instance
 	 Press  2 : To Start an Instance
@@ -65,14 +65,15 @@ def instances():
 	 Press  6 : To Attach volume with instance
 	""")
 
-ch = int(input("Enter your choice: "))
+	ch = int(input("Enter your choice: "))
 
 	if ch == 1:
-		print("""------------MENU----------
+		print("""------------------MENU------------------
 		1. Amazon Linux
 		2. Redhat Linux.
 		3. Ubuntu:lastest
-		4: Windows Server""")
+		4: Windows Server
+		""")
 		n = int(input("Enter your choice: "))
 		with open('ami-image-ids.txt','r') as f:
 			i = 0
@@ -84,27 +85,22 @@ ch = int(input("Enter your choice: "))
 		groupname = input("Enter the security group name: ")
 		os.system("aws ec2 run-instances --instance-type t2.micro --key-name {} --security-groups {} --image-id {}".format(keyname,groupname,ami_id))
 
+
 	elif ch == 2:
-		print("Enter Instance Id : ",end = "")
-		uid = input()
-		os.system(" aws ec2 start-instances --instance-id {}".format(uid))
+		instance_id = input("Enter Instance Id : ")
+		os.system(" aws ec2 start-instances --instance-id {}".format(instance_id))
 
 
-	elif ch == 3:
-	    
-		print("Enter Instance Id : ",end = "")
-		uid = input()
-		os.system(" aws ec2 stop-instances --instance-id {}".format(uid))
+	elif ch == 3:    
+		instance_id = input("Enter Instance Id : ")
+		os.system(" aws ec2 stop-instances --instance-id {}".format(instance_id))
 
 
 	elif ch == 4:
-
 		os.system("aws ec2 describe-instances")
 
-	    
-	elif ch == 5:
-
-	    
+		
+	elif ch == 5: 
 		print("Enter Size : ",end = "")
 		size = input()
 		print("Enter Availability Zone : ",end = "")
@@ -115,9 +111,6 @@ ch = int(input("Enter your choice: "))
 
 
 	elif ch == 6:
-
-
-		os.system("tput setaf 3")
 		print("\t\t\tVolume Zone & Instance Zone Must be same !!!")
 		print("\t\t\t--------------------------------------------")
 		os.system("tput setaf 7")
@@ -130,3 +123,31 @@ ch = int(input("Enter your choice: "))
 		os.system(" aws ec2 attach-volume --volume-id {} --instance-id {} --device /dev/{} ".format(volume_id,instance_id,device))
 
 
+def aws():
+	print("""------------------MENU------------------
+	1. Key-Pair Menu
+	2. Security-Group Menu
+	3. EC2 Instances
+	4. Exit
+	""")
+
+	choice = int(input("Enter your choice: "))
+
+	if choice == 1:
+		keypair()
+
+
+	elif choice == 2:
+		securityGroup()
+
+
+	elif choice == 3:
+		instances()
+
+
+	elif choice == 4:
+		print("Exiting...")
+
+		
+	else:
+		print("Invalid Choice")
