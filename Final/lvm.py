@@ -5,12 +5,6 @@ print("\t\t\tWelcome to partition menu")
 print("\t\t\t-------------------------")
 
  
-import os
-
-print("\t\t\tWelcome to partition menu")
-print("\t\t\t-------------------------")
-
- 
 ch = int(input('''
     press 1: To check the information about the Harddisk    
     press 2: To create a Physical volume (PV) 
