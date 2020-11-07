@@ -1,6 +1,5 @@
 import os
 
-
 def docker():
     print("""------------------DOCKER MENU------------------
         Press  1 : To Check the available Docker Images
