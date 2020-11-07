@@ -18,14 +18,15 @@ if passwd != "toor":
 
 while(True):
     print("""\n\n------------------MENU------------------
- Press  1 : For Docker
- Press  2 : For Hadoop
- Press  3 : For aws 
- Press  4 : For Partition 
- Press  5 : For Webserver Automation 
+ Press  1 : Docker Functions
+ Press  2 : Hadoop Functions
+ Press  3 : AWS CLI
+ Press  4 : Linux Partitions
+ Press  5 : Web Server
+ Press  6 : Exit
  """)
     
-    ch=int(input("Enter Your Choice"))
+    ch=int(input("Please select one of the sub menus: "))
 
     if ch == 1:
         docker.docker() 
@@ -37,8 +38,7 @@ while(True):
         print("Aws not available")
 
 
-    elif ch == 4:
-              
+    elif ch == 4: 
         partition.partition()
 
 
