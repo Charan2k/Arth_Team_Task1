@@ -11,6 +11,7 @@ def hadoop():
 		Press 5 : To check hdfs file system 
 		Press 6 : To stop the datanode
 		Press 7 : To check the report
+		Press 8 : Exit to Main Menu
 		""")
 
 		choice=int(input("Enter your choice"))
@@ -45,6 +46,10 @@ def hadoop():
 
 		elif choice == 7:
 			os.system("hadoop dfsadmin -report")
+			
+		elif choice == 8:
+			print("Exiting...")
+			break
 
 		else:
 			print("Wrong choice")
