@@ -76,7 +76,7 @@ def instances():
 		4: Windows Server
 		""")
 		n = int(input("Enter your choice: "))
-		with open('ami-image-ids.txt','r') as f:
+		with open('ami-img-ids.txt','r') as f:
 			i = 0
 			while(i<n):
 				ami_id = f.readline()
