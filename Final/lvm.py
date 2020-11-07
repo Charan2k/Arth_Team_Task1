@@ -8,10 +8,9 @@ print("\t\t\t-------------------------")
 ch = int(input('''
     press 1: To check the information about the Harddisk    
     press 2: To create a Physical volume (PV) 
-    press 3: To create Physical Volume (PV) + Volume Group (VG)
-    press 4: To create Physical Volume(PV)+Volume Group(VG)+Logical Volume(LV)
-    press 5: To mount it to a folder
-    press 6: To exit
+    press 3: To create Physical Volume(PV)+Volume Group(VG)+Logical Volume(LV)
+    press 4: To mount it to a folder
+    press 5: To exit
     Select : '''))
 
 if ch == 1:
@@ -40,13 +39,13 @@ elif ch == 3:
     os.system("lvcreate --size {}G --name {} {}".format(size1,name2,name1))
     os.system("lvdisplay {}/{}".format(name1,name2))
 
-elif ch == 5:
+elif ch == 4:
     volume=input("Enter the name of volume Group: ")
     name=input("Enter the name of LVM: ")
     mount_point=input("Input the LVM mountpoint name: ")
     os.system("mount /dev/{} /{} /{}".format(volume,name,mount_point))
 
-elif ch == 6:
+elif ch == 5:
     print("Exiting....")
 
 else:
