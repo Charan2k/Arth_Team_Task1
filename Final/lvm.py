@@ -28,7 +28,7 @@ if ch == 2:
     Disk2 =input("\nInput the second disk if not press enter: ")
     os.system("pvcreate {} {}".format(Disk1,Disk2))
 
-elif ch == 33:
+elif ch == 3:
     name1 = input("Input the name of your Volume Group(VG): ")
     os.system("fdisk -l")
     Disk1 =input("\n\nWhich disk you want to use : ")
