@@ -1,5 +1,7 @@
 # program for our menu driven project
 
+import os
+import getpass
 from webserverAutomate import webserver
 from automateHadoop import hadoop
 from awsAutomate import aws

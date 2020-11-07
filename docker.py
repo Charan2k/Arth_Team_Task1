@@ -1,10 +1,12 @@
-import os
+# Module for Docker automation 
 
 def docker():
+
     print("""------------------DOCKER MENU------------------
+        Press  0 : To Start Docker Services/Engine
         Press  1 : To Check the available Docker Images
         Press  2 : To Pull a Docker Image from the DockerHub
-        Press  3 : To To launch docker Container
+        Press  3 : To launch docker Container
         Press  4 : To check the running Containers
         Press  5 : To check all the Containers
         Press  6 : To delete the Container
@@ -14,7 +16,6 @@ def docker():
         """)
 
     ch=int(input("Enter your choice: "))
-
     if ch == 1:
         os.system("docker images")
 

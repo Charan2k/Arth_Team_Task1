@@ -1,4 +1,4 @@
-import os
+# Module for Automating Apache Web Server Configuration
 
 def webserver():
 	print("""------------------MENU------------------

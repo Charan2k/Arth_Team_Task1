@@ -1,4 +1,4 @@
-import os 
+# Module for Hadoop Automation 
 
 def hadoop():
 	print("""------------------MENU------------------
@@ -45,4 +45,4 @@ def hadoop():
 		os.system("hadoop dfsadmin -report")
 
 	else:
-		print("Wrong choice") 
+    		print("Wrong choice")

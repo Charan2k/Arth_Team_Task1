@@ -1,4 +1,4 @@
-import os
+# Module for AWS CLI high availability infrastructure
 
 def keypair():
 	print("""------------------MENU------------------
