@@ -2,11 +2,13 @@ import  os
 
 def partitition():
     while(True):
-        print("""Press 1: To see the disk partition of your system
-                 Press 2: To perform partition
-                 Press 3: To format the partition
-                 Press 4: To mount the partition
-                 Press 5: To exit back to main menu""")
+        print("""------------------MENU------------------
+        Press 1: To see the disk partition of your system
+        Press 2: To perform partition
+        Press 3: To format the partition
+        Press 4: To mount the partition
+        Press 5: To exit back to main menu
+        """)
 
         ch=int(input())
         if ch==1:
