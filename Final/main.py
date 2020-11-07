@@ -6,7 +6,7 @@ import hadoop
 import webserver
 import partition
 
-print("\t\t\tWelcome to Automation of Different Technologies Menu")
+# print("------------------Welcome to Automation of Different Technologies Menu------------------")
 
 print("\t\t\t--------------------------------------")
 
@@ -16,20 +16,14 @@ if passwd != "toor":
    print("password is incorrect....")
    exit()
 
-print("\t\t\t\t\tMenu")
-print("\t\t\t\t\t----")
-
-
-
 while(True):
-    print("""
+    print("""\n\n------------------MENU------------------
  Press  1 : For Docker
  Press  2 : For Hadoop
  Press  3 : For aws 
  Press  4 : For Partition 
- Press  5 : For Webserver Automation
- 
-""")
+ Press  5 : For Webserver Automation 
+ """)
     
     ch=int(input("Enter Your Choice"))
 
