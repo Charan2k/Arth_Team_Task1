@@ -4,6 +4,7 @@ import getpass
 import docker
 import hadoop
 import webserver
+import partition
 
 print("\t\t\tWelcome to Automation of Different Technologies Menu")
 
@@ -25,7 +26,7 @@ while(True):
  Press  1 : For Docker
  Press  2 : For Hadoop
  Press  3 : For aws 
- Press  4 : For lvm 
+ Press  4 : For Partition 
  Press  5 : For Webserver Automation
  
 """)
@@ -44,7 +45,7 @@ while(True):
 
     elif ch == 4:
               
-        print("LVM Not Avilable")
+        partition.partition()
 
 
     elif ch == 5:
