@@ -30,5 +30,5 @@ if __name__ == "__main__":
         print("Exiting...")
 
     else:
-        print("Invalid Choice ")
+        print("Invalid Choice")
 

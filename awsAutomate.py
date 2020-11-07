@@ -150,4 +150,4 @@ def aws():
 
 		
 	else:
-		print("Invalid Choice ")
+		print("Invalid Choice")
