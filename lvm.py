@@ -1,18 +1,7 @@
 import os
-import getpass
-
-
-
 
 print("\t\t\tWelcome to partition menu")
 print("\t\t\t-------------------------")
-
-
-passwd = getpass.getpass("Enter your password: ")
-
-if passwd != "toor":
-   print("password is incorrect....")
-   exit()
 
  
 ch = int(input('''
