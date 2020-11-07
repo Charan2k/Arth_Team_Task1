@@ -6,6 +6,7 @@ from webserverAutomate import webserver
 from automateHadoop import hadoop
 from awsAutomate import aws
 from docker import docker
+from partition import partitition
 
 if __name__ == "__main__":
     print("""------------------MENU------------------

@@ -1,6 +1,6 @@
 # Module for Automating Linux Partitions
 
-def partitition():
+def partition():
     while(True):
         print("""------------------MENU------------------
         Press 1: To see the disk partition of your system
