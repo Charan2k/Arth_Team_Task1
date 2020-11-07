@@ -1,4 +1,5 @@
 # Module for Hadoop Automation 
+import os
 
 def hadoop():
 	print("""------------------MENU------------------
@@ -38,8 +39,8 @@ def hadoop():
 		os.system("hadoop fs -ls /")
 
 	elif choice == 6:
-		choice = input("Enter the Ip address of the data node to stop")
-		os.system("ssh {} hadoop-daemon.sh stop datanode".format(i))
+		ip = input("Enter the Ip address of the data node to stop: ")
+		os.system("ssh {} hadoop-daemon.sh stop datanode".format(ip))
 
 	elif choice == 7:
 		os.system("hadoop dfsadmin -report")

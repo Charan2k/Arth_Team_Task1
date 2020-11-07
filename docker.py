@@ -1,4 +1,6 @@
 # Module for Docker automation 
+import os
+import getpass
 
 def docker():
 
@@ -16,7 +18,13 @@ def docker():
         """)
 
     ch=int(input("Enter your choice: "))
-    if ch == 1:
+
+    if ch == 0:
+        print("Starting Docker Engine")
+        os.system("systemctl start docker")
+        print("Docker Container Engine Started Successfully")
+
+    elif ch == 1:
         os.system("docker images")
 
 
@@ -28,8 +36,7 @@ def docker():
     elif ch == 3:
         cont_name = input("Enter Container name: ")
         img_name = input("Enter docker image name: ")
-        os.system(" docker run -dit --name {} {}".format(name1,name2))
-
+        os.system(" docker run -dit --name {} {}".format(cont_name,img_name))
 
     elif ch == 4:
         print(" Running Containers")

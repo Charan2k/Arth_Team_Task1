@@ -1,8 +1,9 @@
 # Module for Automating Linux Partitions
+import os
 
 def partition():
     while(True):
-        print("""------------------MENU------------------
+        print("""\n\n------------------MENU------------------
         Press 1: To see the disk partition of your system
         Press 2: To perform partition
         Press 3: To format the partition
@@ -19,9 +20,11 @@ def partition():
             os.system("fdisk {}".format(i))
 
         elif ch==3:
+            i=input("Enter the name of disk")
             os.system("mkfs.ext4 {}".format(i))
 
         elif ch==4:
+            i=input("Enter the name of disk")
             j=input("Enter the name of directory which you want to mount")
             os.system("mount  {} {}".format(i,j))
 
