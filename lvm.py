@@ -15,11 +15,13 @@ ch = int(input('''
 
 if ch == 1:
     os.system("fdisk -l")
+  
+if ch == 2:
     Disk1 =input("\n\nForm above input the name of disk you want to use : ")
     Disk2 =input("\nInput the second disk if not press enter: ")
     os.system("pvcreate {} {}".format(Disk1,Disk2))
 
-elif ch == 2:
+elif ch == 33:
     name1 = input("Input the name of your Volume Group(VG): ")
     os.system("fdisk -l")
     Disk1 =input("\n\nWhich disk you want to use : ")
@@ -27,7 +29,7 @@ elif ch == 2:
     os.system("pvcreate {} {}".format(Disk1,Disk2))
     os.system("vgcreate {} {} {}".format(name1,Disk1,Disk2))
 
-elif ch == 3:    
+elif ch == 4:    
     name1 = input("Input the name of your Volume Group(VG): ")
     name2 = input("Input the name of your Logical Volume(LV): ")
     size1 = input("Input the Size in GB : ")
