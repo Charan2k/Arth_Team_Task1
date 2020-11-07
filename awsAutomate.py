@@ -125,31 +125,31 @@ def instances():
 
 
 def aws():
-	print("""------------------MENU------------------
-	1. Key-Pair Menu
-	2. Security-Group Menu
-	3. EC2 Instances
-	4. Exit
-	""")
+	while(True):
+		print("""------------------MENU------------------
+		1. Key-Pair Menu
+		2. Security-Group Menu
+		3. EC2 Instances
+		4. Exit
+		""")
 
-	choice = int(input("Enter your choice: "))
+		choice = int(input("Enter your choice: "))
 
-	if choice == 1:
-		keypair()
-
-
-	elif choice == 2:
-		securityGroup()
+		if choice == 1:
+			keypair()
 
 
-	elif choice == 3:
-		instances()
+		elif choice == 2:
+			securityGroup()
 
 
-	elif choice == 4:
-		print("Exiting...")
+		elif choice == 3:
+			instances()
 
-		
-	else:
-		print("Invalid Choice")
- 
+
+		elif choice == 4:
+			print("Exiting...")
+
+
+		else:
+			print("Invalid Choice")
