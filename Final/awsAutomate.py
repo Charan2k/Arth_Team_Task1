@@ -1,6 +1,8 @@
 # Module for AWS CLI high availability infrastructure
 import os 
 
+#just cheking git local repo
+
 def keypair():
 	print("""------------------MENU------------------
 	1. Create a key-pair
